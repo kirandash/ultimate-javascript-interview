@@ -20,3 +20,6 @@
 
 #### M1.1.2 constructor functions and the this keyword
 1. Constructor fns are used to create new JS objects. this keyword always refers to its context
+
+#### M1.1.3 The Prototype Object
+1. Every Object has a Prototype object by default. Any properties that are added to Prototype object will be automatically be inherited to all instances.

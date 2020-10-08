@@ -18,5 +18,15 @@
         var user2  = new User('Jill', 'Dash', 33, 'female')
         console.log(user1)
         console.log(user2)
+
+        // M1.1.3 Prototypes
+        User.prototype.emailDomain = '@facebook.com'
+        User.prototype.getEmailAddress = function() {
+            return this.firstName + this.lastName + this.emailDomain
+        }
+        console.log(user1.emailDomain)
+        console.log(user2.emailDomain)
+        console.log(user1.getEmailAddress())
+        console.log(user2.getEmailAddress())
     </script>
 </html>
