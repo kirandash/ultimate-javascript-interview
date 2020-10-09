@@ -61,3 +61,14 @@
 ### M1.2.10 Search LL
 
 ### M1.2.11 Add indexOf
+
+### M1.2.12 Big O Notation and Calculating the Runtime of a Fn
+1. Big O notation helps us analyze the complexity of an algorithm and tells us how perfomant the code will be
+2. It tells us how slower our code will get if we add more data
+3. All possible cases:
+    - 1. **Constant Run Time** - If we increase the size of data - execution time does not change: Big O Notation: O(1)
+    - 2. **Lineaer Run Time** - Big O Notation: O(n) - Ex: for loop
+    - 3. **Exponential Run Time** - Big O Notation: O(n^2) - Ex: for loop in for loop - Not very efficient when data becomes large
+    - 4. **Logarithmic Run Time** - Big O Notation: O(log n) - Ex: Binary search - Very performant when it comes to handling large data
+        - Ex: 4000 element will take only 12 operations to find
+4. Binary Search: Binary search are always done on sorted arrays.

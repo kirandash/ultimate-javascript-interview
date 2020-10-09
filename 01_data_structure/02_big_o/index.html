@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>Big O Notation</title>
+    </head>
+    <body>
+
+    </body>
+    <script>
+        // Big O Notation
+        // 1. Constant Run Time - If we increase the size of data or array - execution time remains constant
+        // Big O Notation: O(1)
+        function log(array) {
+            console.log(array[0]);
+            console.log(array[1]);
+        }
+        log([1,2,3,4])
+        log([1,2,3,4,5,6,7,8,9])
+
+        // 2. Linear Run Time
+        // Big O Notation: O(n)
+        function logAll(array) {
+            for(var i=0; i < array.length; i++) {
+                console.log(array[i]);
+            }
+        }
+        logAll([1,2,3,4])
+        logAll([1,2,3,4,5,6,7,8,9])
+
+        // 3. Exponential Run Time
+        // Big O Notation: O(n^2)
+        function addAndLog(array) {
+            for(var i=0; i < array.length; i++) {
+                for(var j=0; j < array.length; j++) {
+                    console.log(array[i] + array[j]);
+                }
+            }
+        }
+        addAndLog(['A', 'B', 'C']) // 9 pairs
+        addAndLog(['A', 'B', 'C', 'D']) // 16 pairs
+        addAndLog(['A', 'B', 'C', 'D', 'E']) // 25 pairs log
+
+        // 4. Logarithmic Run Time
+        // Big O notaion: O(log n)
+        function binarySearch(array, key) {
+            // make sure that the array is sorted first before doing a binary search
+            var low = 0;
+            var high = array.length - 1;
+            var mid;
+            var element;
+
+            while(low <= high) {
+                // start from middle
+                mid = Math.floor((low + high) / 2, 10);
+                // get the middle element
+                element = array[mid];
+                // if mid element is less than key - new low is moved up to middle + 1
+                if(element < key) {
+                    low = mid + 1;
+                } else if (element > key) {
+                    // if mid element is higher than key - new high is moved down to middle - 1
+                    high = mid - 1;
+                } else {
+                    // return middle value
+                    return mid;
+                }
+            }
+            // could not find key in array
+            return -1;
+        }
+    </script>
+</html>
