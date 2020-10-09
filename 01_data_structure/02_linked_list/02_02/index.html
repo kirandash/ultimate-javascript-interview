@@ -70,5 +70,22 @@
 
         console.log(LL.head)
         console.log(LL.tail.prev.prev.prev.prev.prev.prev)
+
+        // M1.2.8 Remove Head
+        LinkedList.prototype.removeHead = function() {
+            // case 1: if LL is empty - do nothing
+            if(!this.head) return null;
+            // get current head value
+            var val = this.head.value;
+            // move current head to the next node
+            this.head = this.head.next;
+            // set moved head's prev as null 
+            if (this.head) this.head.prev = null
+            // if no head - set tail as null
+            else this.tail = null
+            return val; // return removed node value
+        }
+
+        console.log(LL.removeHead())
     </script>
 </html>
