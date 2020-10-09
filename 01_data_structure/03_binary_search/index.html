@@ -128,5 +128,24 @@
         // Testing Breadth First Traversal
         console.log('Breadth First Traversal')
         bst.breadthFirstTraversal(logNodeValue);
+
+        // getMinVal and getMaxVal
+        BST.prototype.getMinVal = function(){
+            // min value must be the furthest left child
+            if(this.left) return this.left.getMinVal() // recursive
+            // if no child return the current value
+            else return this.value;
+        }
+
+        BST.prototype.getMaxVal = function(){
+            // max value must be the furthest right child
+            if(this.right) return this.right.getMaxVal()
+            // if no child return the current value
+            else return this.value;
+        }
+
+        // Test
+        console.log('Min: ', bst.getMinVal())
+        console.log('Max: ', bst.getMaxVal())
     </script>
 </html>

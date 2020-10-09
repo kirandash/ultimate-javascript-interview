@@ -139,3 +139,20 @@ Ans: **Memory Management Benefits:**
 1. Moving down the tree level by level
 2. Application:
     - Define a heirarchy or level of commands. Ex: Structure of a company
+
+### M1.3.8 Exercise Add methods for getMinVal and getMaxVal
+1. getMinVal - min value must be found at the furthest left child
+2. getMaxVal - max value must be found at the furthest right child
+
+### M1.3.9 Performance and application
+1. BSTs are used often to store data.
+2. Fast to searc and retrieve data from.
+3. also fast to add/remove
+4. Big O notation: O(log n): logarithmic run time. as we only search for half of the data set.
+    - faster than linked list. (O (n)) - might have to search through all nodes. Ex: 4000 nodes
+    - But in balanced BST, we have to search only 12 times in 4000 nodes
+5. Cons: 
+    - For specific data set: we might end up having imbalanced BST ex: a tree with only right nodes or only left nodes. Then the search will be similar to LL.
+6. Note: BSTs are more performant when they are **balanced**
+7. Application: Anything that needs a binary search
+    - Ex: dictionary, phone book, users etc
