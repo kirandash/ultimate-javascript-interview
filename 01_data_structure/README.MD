@@ -128,3 +128,9 @@ Ans: **Memory Management Benefits:**
 ### M1.3.5 Depth First Traversal
 1. On left go all the way till last element and then go up and right to next branch and then again all the way to left down. then up and next right branch.
 2. Usees powerful recursive approach
+
+### M1.3.6 Refactoring Depth First Traversal to support orders
+1. So far Depth First traversal is implemented in order. We will configure it to have different orders now
+    - in order: left children ---> parent node ---> right children
+    - pre order: parent node ---> left children ---> right children (application: when we make copy of a tree)
+    - post order: left children ---> right children ---> parent node
