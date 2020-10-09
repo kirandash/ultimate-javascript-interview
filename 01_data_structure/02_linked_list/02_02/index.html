@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Linked List</title>
+    </head>
+    <body>
+
+    </body>
+    <script>
+        // LinkedList constructor fn
+        function LinkedList() {
+            this.head = null;
+            this.tail = null;
+        }
+        // Node Constructor Function
+        function Node(value, next, prev) {
+            this.value = value;
+            this.next = next;
+            this.prev = prev;
+        }
+        // LL instance
+        var LL = new LinkedList();
+        console.log(LL);
+        var userList = new LinkedList();
+        var todoList = new LinkedList();
+
+        // Node instance
+        var node1 = new Node(100, 'node2', null);
+        console.log(node1);
+    </script>
+</html>

@@ -22,4 +22,19 @@
 1. Constructor fns are used to create new JS objects. this keyword always refers to its context
 
 #### M1.1.3 The Prototype Object
-1. Every Object has a Prototype object by default. Any properties that are added to Prototype object will be automatically be inherited to all instances.
+1. Every Object as a Prototype object by default. Any properties that are added to Prototype object will be automatically be inherited to all instances.
+
+### M1.2 Linked Lists
+#### M1.2.1 What is a Linked List
+1. A list of nodes connected together through a fine line.
+    - **Singly Linked List**: Each node has reference only to the next node.
+    - **Doubly Linked List**: Each node has reference to the next and prev node as well.
+    - Note: First node is called the **head** pointer of the linked list. Last node is called the **tail** pointer of the linked list.
+    - Task: Add a node to head or tail of linked list. Search through linked list.
+    - Ex: JSON object: { value: 7, next: nextNode, prev: prevNode }
+
+#### M1.2.2 Linked List and Node constructor functions
+1. To go through a Linked List all we need is:
+    - head pointer
+    - tail pointer
+2. Since each node has info about prev and next node: we can easily go through the linked lists.
