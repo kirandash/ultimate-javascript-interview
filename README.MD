@@ -46,6 +46,9 @@
 1. Must take care of two scenarios while adding the new node to the head linked list:
     - If LL is empty: point head and tail to same node
     - If the LL has any entries: point new head and old head to correct points
-        * Point current head to new node being added. Earlier it was pointing to null
+        * Point current head node's prev to new node being added. Earlier it was pointing to null
 
 #### M1.2.5 Using add to head
+
+#### M1.2.6 Add To Tail - LL prototype method
+1. If LL is not empty - current tail nodes next must not point to null any more and must point to the new node

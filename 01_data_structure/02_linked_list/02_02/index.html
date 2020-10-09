@@ -29,13 +29,26 @@
 
         // M1.2.3 Add To Head
         LinkedList.prototype.addToHead = function(value) {
+            // Node to be headed to head of LL
             var newNode = new Node(value, this.head, null);
-            // Case 1: If LL has already node - current nodes head must not point to null an
+            // Case 1: If LL has already node - current head nodes prev must not point to null and must point to the new node
             if(this.head) this.head.prev = newNode;
             // Case 2: If LL has no nodes - both head and tail node must be the same
             else this.tail = newNode;
             // Add newNode to head of our LL - common in both cases
             this.head = newNode;
+        }
+
+        // M1.2.6 Add To Tail - LL prototype method
+        LinkedList.prototype.addToTail = function(value) {
+            // Node to be added to tail of LL
+            var newNode = new Node(value, null, this.tail);
+            // Case 1: If LL is not empty - current tail nodes next must not point to null any more and must point to the new node
+            if(this.tail) this.tail.next = newNode;
+            // Case 2: If LL has no nodes - both head and tail node must be the same
+            else this.head = newNode;
+            // Add newNode to tail of our LL - common in both cases
+            this.tail = newNode;
         }
 
         // M1.2.5 Using add to head
