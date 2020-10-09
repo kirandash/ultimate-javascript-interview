@@ -104,5 +104,24 @@
         }
 
         console.log(LL.removeTail())
+
+        // M1.2.10 Search LL
+        LinkedList.prototype.search = function(searchValue) {
+            // Start with head
+            var currentNode = this.head;
+            // move through the Linked List - one node at a time
+            while(currentNode) {
+                // current node value matches with search value - return the current node value
+                if (currentNode.value === searchValue) return currentNode.value;
+                // move to the next node
+                currentNode = currentNode.next;
+            }
+            // if the search value could not be found - return null
+            return null;
+        }
+
+        // Testing Search
+        console.log(LL.search(300))
+        console.log(LL.search(11))
     </script>
 </html>
