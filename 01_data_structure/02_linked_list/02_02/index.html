@@ -79,13 +79,30 @@
             var val = this.head.value;
             // move current head to the next node
             this.head = this.head.next;
-            // set moved head's prev as null 
+            // if after removing head new ll is going to have some element set moved head's prev as null 
             if (this.head) this.head.prev = null
-            // if no head - set tail as null
+            // if after removing head new ll is going to be empty - set tail as null
             else this.tail = null
             return val; // return removed node value
         }
 
         console.log(LL.removeHead())
+
+        // M1.2.9 Remove Tail
+        LinkedList.prototype.removeTail = function() {
+            // case 1: if LL is empty - do nothing
+            if(!this.tail) return null;
+            // get current head value of LL
+            var val = this.tail.value;
+            // move current LL tail to the prev node
+            this.tail = this.tail.prev;
+            // if after removing tal, new ll is going to be not empty - st moved tails's next as null
+            if(this.tail) this.tail.next = null
+            // if after removing tail new ll is going to be empty - set head as null. tail is already null
+            else this.head = null
+            return val; // return removed node value
+        }
+
+        console.log(LL.removeTail())
     </script>
 </html>

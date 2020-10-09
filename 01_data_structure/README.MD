@@ -55,3 +55,5 @@
 
 ### M1.2.8 Remove Head
 1. If LL is not empty and if LL is empty
+
+### M1.2.9 Remove Tail
