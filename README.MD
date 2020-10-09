@@ -39,5 +39,13 @@
     - tail pointer
 2. Since each node has info about prev and next node: we can easily go through the linked lists.
 
-### M1.2.3 Add To Head - LL method
+#### M1.2.3 Add To Head - LL method
 1. Create addToHead method for LL prototype
+
+#### M1.2.4 Add node to head of LL
+1. Must take care of two scenarios while adding the new node to the head linked list:
+    - If LL is empty: point head and tail to same node
+    - If the LL has any entries: point new head and old head to correct points
+        * Point current head to new node being added. Earlier it was pointing to null
+
+#### M1.2.5 Using add to head
