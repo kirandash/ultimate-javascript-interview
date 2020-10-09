@@ -59,3 +59,5 @@
 ### M1.2.9 Remove Tail
 
 ### M1.2.10 Search LL
+
+### M1.2.11 Add indexOf

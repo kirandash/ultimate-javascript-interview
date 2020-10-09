@@ -123,5 +123,28 @@
         // Testing Search
         console.log(LL.search(300))
         console.log(LL.search(11))
+
+        // M1.2.11 Exercise - implement indexOf - should return all indexes in an array
+        LinkedList.prototype.indexOf = function(value) {
+            // start from the head
+            var currrentNode = this.head;
+            // array to store output indexes
+            var indexes = [];
+            var currentIndex = 0;
+            while(currrentNode) {
+                if(currrentNode.value === value) indexes.push(currentIndex);
+                currentIndex++;
+                // move to the next node
+                currrentNode = currrentNode.next;
+            }
+            return indexes;
+        }
+
+        // Testing indexOf
+        LL.addToHead(300)
+        LL.addToHead('Hello')
+        LL.addToHead(300)
+        console.log(LL.indexOf(300))
+        console.log(LL.indexOf(20))
     </script>
 </html>
