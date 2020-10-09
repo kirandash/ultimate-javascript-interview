@@ -74,5 +74,27 @@
         console.log(bst.contains(50))
         console.log(bst.contains(59))
         console.log(bst.contains(15))
+
+        // M1.3.5 Depth First Traversal Fn
+        BST.prototype.depthFirstTraversal = function(iteratorFunc) {
+            // Run iteratorFunc recursively for all left nodes
+            if(this.left) this.left.depthFirstTraversal(iteratorFunc);
+            // Run iteratorFunc first on left node
+            // iteratorFunc(this.left.value)
+            // Run on parent node
+            iteratorFunc(this.value);
+            // Run iteratorFunc resursively for all right nodes
+            if(this.right) this.right.depthFirstTraversal(iteratorFunc);
+            // Run on right node
+            // iteratorFunc(this.right.value)
+        };
+
+        // Test Depth First Traversal
+        bst.depthFirstTraversal(log);
+
+        function log(value) {
+            console.log(value)
+        }
+
     </script>
 </html>
