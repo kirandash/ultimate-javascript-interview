@@ -52,3 +52,5 @@
 
 #### M1.2.6 Add To Tail - LL prototype method
 1. If LL is not empty - current tail nodes next must not point to null any more and must point to the new node
+
+#### M1.2.7 Test Add To Tail and Add To Head
