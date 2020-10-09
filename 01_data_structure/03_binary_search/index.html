@@ -106,5 +106,27 @@
         // Test Depth First Traversal - post-order
         console.log('Post Order Depth First Traversal')
         bst.depthFirstTraversal(log, 'post-order');
+
+        // M1.3.7 Breadth First Traversal - Level by Level Traversal
+        BST.prototype.breadthFirstTraversal = function(iteratorFunc) {
+            var queue = [this];// first in first out, this refers to the root node of bst
+            while(queue.length) {
+                var treeNode = queue.shift(); // takes out first var out of queue and store
+                // Run iteration on moved out node
+                iteratorFunc(treeNode)
+                // if shifted Node has a left child, push it to queue
+                if(treeNode.left) queue.push(treeNode.left)
+                // if shifted Node has a left child, push it to queue
+                if(treeNode.right) queue.push(treeNode.right)
+            }
+        }
+        
+        function logNodeValue(node) {
+            console.log(node.value)
+        }
+
+        // Testing Breadth First Traversal
+        console.log('Breadth First Traversal')
+        bst.breadthFirstTraversal(logNodeValue);
     </script>
 </html>

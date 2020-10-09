@@ -134,3 +134,8 @@ Ans: **Memory Management Benefits:**
     - in order: left children ---> parent node ---> right children
     - pre order: parent node ---> left children ---> right children (application: when we make copy of a tree)
     - post order: left children ---> right children ---> parent node
+
+### M1.3.7 Breadth First Traversal
+1. Moving down the tree level by level
+2. Application:
+    - Define a heirarchy or level of commands. Ex: Structure of a company
