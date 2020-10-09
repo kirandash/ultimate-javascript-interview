@@ -29,13 +29,19 @@
 
         // M1.2.3 Add To Head
         LinkedList.prototype.addToHead = function(value) {
-            var newnNode = new Node(value, this.head, null);
+            var newNode = new Node(value, this.head, null);
             // Case 1: If LL has already node - current nodes head must not point to null an
-            if(this.head) this.head.prev = newnNode;
+            if(this.head) this.head.prev = newNode;
             // Case 2: If LL has no nodes - both head and tail node must be the same
             else this.tail = newNode;
             // Add newNode to head of our LL - common in both cases
             this.head = newNode;
         }
+
+        // M1.2.5 Using add to head
+        LL.addToHead(100);
+        LL.addToHead(200)
+        LL.addToHead(300)
+        console.log(LL);
     </script>
 </html>
