@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Recursion</title>
+    </head>
+    <body>
+
+    </body>
+    <script>
+        // Example - Factorial(!) of a number
+        // 4! - 4 * 3 * 2 * 1
+        function factorial(num) {
+            // base case
+            if(num == 1) {
+                return num;
+            }
+            // recursive cae
+            else {
+                return num * factorial(num - 1)
+            }
+        }
+        console.log(factorial(4))
+    </script>
+</html>

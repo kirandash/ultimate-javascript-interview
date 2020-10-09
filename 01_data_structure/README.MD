@@ -72,3 +72,41 @@
     - 4. **Logarithmic Run Time** - Big O Notation: O(log n) - Ex: Binary search - Very performant when it comes to handling large data
         - Ex: 4000 element will take only 12 operations to find
 4. Binary Search: Binary search are always done on sorted arrays.
+
+### M1.2.13 Linked List - Performance Analysis
+1. Performance:
+    * Add/remove: Constant Time O(1) 
+        - Add/remove head
+        - Add/remove tail
+    * Searching Through Linked List
+        - Linear time complexity O(n)
+        - O(n)
+    *  LL are quite performant and commonly used DS
+    *  Practical use
+        - Online gaming
+        - Poker, board games, dominoes
+2. Interview Question: What are memory management benefits of Linked Lists?
+Ans: **Memory Management Benefits:**
+    - Data doesn't have to be stored together
+    - Data can be stored in separate chunks in separate places yet still be linked with next and prev pointer.
+
+## M1.3 Binary Search Tree
+### M1.3.1 What is a binary Search tree
+1. A binary search tree is also a collection of nodes. Where each node has it's own value and is connected to two more nodes.
+    - Each left node < parent node. Each right node > parent node
+    - when we add a new node, we start from the top and move our way down by calculating the > or < logic and insert the new node when a new empty slot is found.
+    - Each node in tree itself is a BST
+2. Topics
+    - BST
+    - Contains
+    - Traversal
+        * **Depth First Traversal**: Start from top and go all the way to the bottom on left and then on right.
+        * **Breadth First Traversal**: Start from top and go down level by level.
+
+### M1.3.2 Recursion
+1. We need to understand the concept of recursion bcoz BSTs are recursive.
+2. Recursion is **when a fn calls itself**.
+3. All recursive fn basically has 2 cases:
+    * **base case**: in which the fn doesn't call itself and does some other task
+    * **recursive case**: in which the fn calls itself
+4. Ex: Factorial of a num
