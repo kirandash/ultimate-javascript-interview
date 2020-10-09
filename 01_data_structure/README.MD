@@ -97,7 +97,7 @@ Ans: **Memory Management Benefits:**
     - when we add a new node, we start from the top and move our way down by calculating the > or < logic and insert the new node when a new empty slot is found.
     - Each node in tree itself is a BST
 2. Topics
-    - BST
+    - BST - create root node, insert nodes
     - Contains
     - Traversal
         * **Depth First Traversal**: Start from top and go all the way to the bottom on left and then on right.
@@ -109,4 +109,15 @@ Ans: **Memory Management Benefits:**
 3. All recursive fn basically has 2 cases:
     * **base case**: in which the fn doesn't call itself and does some other task
     * **recursive case**: in which the fn calls itself
-4. Ex: Factorial of a num
+4. Keep calling it self until the base case satisfies is called recursion.
+5. Ex: Factorial of a num
+
+### M1.3.3 Insert Method - BST
+1. Each BST is defined by: value, left child and right child
+2. **Steps**:
+    - if value is less than parent node value - insert it to left
+        * if there is no left child - add new BST to left
+        * is there already a left child - recursively call insert function on its left
+    - if value is > parent node value - insert it to right
+        * if there is no right child - add new BST to right
+        * if there is there already a right child - recursively call insert function on its right
