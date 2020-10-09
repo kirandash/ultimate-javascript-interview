@@ -38,3 +38,6 @@
     - head pointer
     - tail pointer
 2. Since each node has info about prev and next node: we can easily go through the linked lists.
+
+### M1.2.3 Add To Head - LL method
+1. Create addToHead method for LL prototype

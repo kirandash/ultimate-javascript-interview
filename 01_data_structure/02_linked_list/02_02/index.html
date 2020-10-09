@@ -26,5 +26,10 @@
         // Node instance
         var node1 = new Node(100, 'node2', null);
         console.log(node1);
+
+        // M1.2.3 Add To Head
+        LinkedList.prototype.addToHead = function(value) {
+            var newnNode = new Node(value, this.head, null);
+        }
     </script>
 </html>
