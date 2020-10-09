@@ -121,3 +121,6 @@ Ans: **Memory Management Benefits:**
     - if value is > parent node value - insert it to right
         * if there is no right child - add new BST to right
         * if there is there already a right child - recursively call insert function on its right
+
+### M1.3.4 Contains Method
+1. To check if BST contains a value

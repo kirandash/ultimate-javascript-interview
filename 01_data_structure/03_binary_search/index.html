@@ -50,5 +50,29 @@
         console.log(bst.right.left.left) // 59 with no child
         console.log(bst.left.right.left) // 35 with no child
         console.log(bst.right.right) // 100 with left and right child node
+
+        BST.prototype.contains = function(value) {
+            // if matches current value - return true
+            if(value === this.value) return true
+            // if value less than parent node - go left
+            else if(value < this.value) {
+                // if no left child - return false
+                if(!this.left) return false
+                // if left child - run contains on its left child recursively
+                else return this.left.contains(value)
+            }
+            // if value gt parent node - go right
+            else if(value > this.value) {
+                // if no right child - return false
+                if(!this.right) return false
+                // if right child - run contains on its right child recursively
+                else return this.right.contains(value)
+            }
+        };
+
+        // Test Contains
+        console.log(bst.contains(50))
+        console.log(bst.contains(59))
+        console.log(bst.contains(15))
     </script>
 </html>
