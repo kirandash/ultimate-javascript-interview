@@ -119,3 +119,19 @@ Ans:
 ## 03_13 Logging X and Y
 1. var x = y = 200; ---> translates to var x; y; y = 200; x = y; y will be created as global var since no let, var, const is supplied.
 2. To avoid such issues: better to use 'use strict'
+
+## 03_14 call and apply methods
+1. Describe javascript .call() and .apply() methods
+2. How do they function?
+3. What arguments do they take?
+4. How are they different?
+5. call method:
+    - call method is a **native JS method on the function prototype object**
+    - any fn defined in JS will be able to use the call()
+    - call method gives us an alternative way of calling fn instead of the traditional way
+    - gives us a **different way to pass arguments**
+    - gives us a way to **change context of this** keyword as well which normal fn does not give.
+6. syntax: `call(this context, args)`
+
+## 03_14 apply method
+1. apply method is similar to call method but the difference is how the arguments are sent. **AS AN ARRAY**
