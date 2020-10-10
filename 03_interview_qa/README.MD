@@ -65,3 +65,22 @@
 1. method on an obj will have this pointing to the obj
 2. method inside method will loose it's scope from obj and point to the global scope.
     - To fix: use **self or declare this in global scope**
+
+## 03_08 == vs === comparision operators
+Ans: 
+* == (equals)
+    - tests for abstract equality
+    - doesn't test for data type
+* === (strict equals)
+    - tests for strict equality
+    - tests for data type
+* Under the hood
+    - comparing number and string: 
+        - string is converted to a number
+        - comparison is made
+    - comparing boolean and non-boolean
+        - non boolean converted into boolean
+        - comparison is made
+    - Comparing obj and primitive data type
+        - obj is converted to primitive data-type
+        - comparison is made
