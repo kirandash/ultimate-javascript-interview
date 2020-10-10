@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <title>log number</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // var num
+    // num = 50
+    var num = 50;
+
+    function logNumber() {
+        // redeclaring variable here will be hoisted again as undefined to the top of this scope
+        // var num ---> undefined
+        console.log(num);
+        // num = 100
+        var num = 100;
+    }
+
+    logNumber();
+</script>
+
+</html>

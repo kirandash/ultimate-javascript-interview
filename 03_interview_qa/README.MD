@@ -84,3 +84,8 @@ Ans:
     - Comparing obj and primitive data type
         - obj is converted to primitive data-type
         - comparison is made
+
+## 03_09 Log Number Function - re declaring a variable - hoisting
+1. Redeclaring variable will re hoist it
+2. JS first checks in immediate scope and then the outer scope
+3. var is an ES5 JS feature - old code
