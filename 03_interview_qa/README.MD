@@ -147,5 +147,11 @@ Ans:
 * Using array Methods:
 1. list2 = list1.slice()
 2. list2 = list1.concat([])
-* use spread operator
+* use spread operator: list2 = [...list1]
 * use empty array and loop in through for loop
+
+## 03_16 Singly or Doubly invoked fn
+* getTotal(10, 20) and getTotal(10)(20) - should return 30
+1. sol 1: using curried fn
+2. sol 2: using `Array.prototype.slice.call(arguments)`
+    - to create copy of array using .slice and call method to convert array like obj into array

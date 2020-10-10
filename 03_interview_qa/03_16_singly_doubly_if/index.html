@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <title>Singly or Doubly invoked fn</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // Solution 1: Using Curried Fn
+    function getTotal(a, b) {
+        if(!b)
+            return function(b) {
+                return a + b;
+            }
+        return a + b;
+    }
+    console.log(getTotal(10, 20)); // 30 - singly invoked fn
+    console.log(getTotal(10)(20)); // 30 - doubly invoked fn
+
+    // Solution 2: Using .slice and .call method if fn has no args
+    function getTotal2() {
+        // {0: 10, 1:20}
+        // arguments obj: array like obj, but does not have array like methods.
+        // need to convert from array like obj to actual array - using .slice method
+        var args = Array.prototype.slice.call(arguments);
+
+        if(args.length === 2) {
+            return args[0] + args[1];
+        }
+        else if(args.length === 1) {
+            return function(num2) {
+                return args[0] + num2
+            }
+        }
+    }
+
+    console.log(getTotal2(5, 20)); // 30
+    console.log(getTotal2(5)(20)); // 30
+</script>
+
+</html>
