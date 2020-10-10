@@ -22,3 +22,15 @@
     * **Using IIFE** to preserve value of i in it's own scope for onClick events
     * Using separate fn scope and passing button, i
     * Using **let** keyword for i variable (ES6 solution) - let has a block scope compared to var scope which has a global scope
+
+## 03_04 Closures
+1. What is a closure? Code out an example closure
+2. Ans: 
+    * A closure is an inner function that has access to the scope of an enclosing function
+    * A closure has access to **variables** in 3 separate scopes:
+        - variables in it's own scope
+        - variables in scope of the outer fn
+        - variables in the global scope
+    * The closure also has access to
+        - it's own parameters
+        - parameters of outer fn

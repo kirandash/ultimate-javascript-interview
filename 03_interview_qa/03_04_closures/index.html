@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <title>Closure</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // global scope
+    const globalVariable = 'global var'
+
+    function outterFunc(param1) {
+        // outer fn scope
+        const variable1 = 'var one'
+
+        // Closure - A fn inside a fn with 3 scope - local, lexical fn, global scope
+        function innerFunc(param2) {
+            // inner fn scope
+            const variable2 = 'var two'
+
+            console.log('globalVariable: ', globalVariable)
+            console.log('variable1: ', variable1)
+            console.log('variable2: ', variable2)
+            console.log('param1: ', param1)
+            console.log('param2: ', param2)
+        }
+
+        innerFunc('param two')
+    }
+
+    outterFunc('param one')
+
+</script>
+
+</html>
