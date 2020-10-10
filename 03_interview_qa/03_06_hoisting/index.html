@@ -1,0 +1,73 @@
+<html>
+
+<head>
+    <title>Hoisting</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // 1. variable hoisting
+    console.log(color) // no error - just undefined. bcoz variable is hoisted and declared but not assigned
+
+    var color = 'blue'
+
+    console.log(color) // variable assigned
+
+    // converted into following code by interpreter
+    // var color
+    // color = 'blue'
+
+    // Fn Hoisting
+    // 2. In a Fn expression - fn declaration is hoisted to the top
+    // console.log(getProduct(2, 3)) // will generate error and stop execution of code
+
+    var getProduct = function (num1, num2) {
+        return num1 * num2
+    }
+
+    console.log(getProduct(2, 3))
+
+    // converted into the following code by interpreter
+    // var getProduct
+    // getProduct = function(..)...
+
+    // 3. In a fn declaration - fn with definition is moved to the top
+    console.log(getProduct2(2, 3)) // will not generate error
+
+    function getProduct2(num1, num2) {
+        return num1 * num2
+    }
+
+    console.log(getProduct2(2, 3))
+
+    // 4. Var and fn inside another fn - are hoisted to top of parent fn's scope
+    console.log(globalVar);
+    var globalVar ='global var';
+    console.log(globalVar);
+
+    (function(){
+        // var, fn names for expression, fn declaration with definition will be hoistd here
+        console.log(name);
+        // console.log(getAge());
+        console.log(getState());
+
+        var name = 'Jen';
+
+        var getAge = function() {
+            return 30;
+        }
+
+        function getState() {
+            return 'Delaware'
+        }
+
+        console.log(name);
+        console.log(getAge());
+        console.log(getState());
+    })();
+
+</script>
+
+</html>

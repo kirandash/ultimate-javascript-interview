@@ -39,3 +39,13 @@
 1. What is the this keyword and how is it used?
 2. Ans:
     * this refers to whatever object it is directly inside of. Ex: in global env: this referes to global window object
+
+## 03_06 Hoisting - var, fn expression, fn declaration, in - global and fn scope
+1. What variable and fn hoisting is and how it works?
+2. Ans: 
+    * In JS variables and fns are hoisted to the top of the scope where they are declared.
+        - scopes are either global scope of function scope
+        - Variable and fn hoisting is basically a process in which JS interpreter looks through the code to find out all the var and fn declarations and it hoists those declarations to the top of the file. but not the assignments. Just the declarations.
+    * For variables, fn expressions: declarations are hoisted to the top
+    * For fn declarations: hoisting is different.: the whole fn with it's definition or assignment is moved to the top of the file.
+    * Also if we are declaring var and fn inside a parent fn, the hoisting of those only happens in the parent fn.
