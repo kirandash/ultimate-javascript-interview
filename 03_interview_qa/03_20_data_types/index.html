@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <title>Data Types</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    console.log(typeof null); // object
+    console.log(typeof undefined); // undefined
+    console.log(typeof {}); // object
+    console.log(typeof []); // object
+
+    // How to detect if data is array - with isArray() method
+    const myArr = [1, 6, 8, 9]
+    console.log(Array.isArray(myArr)) 
+    console.log(Array.isArray({}))
+
+    // How to detect if data is array - with instanceOf keyword
+    console.log(myArr instanceof Array)
+    console.log({} instanceof Array)
+</script>
+
+</html>

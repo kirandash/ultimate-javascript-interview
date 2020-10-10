@@ -185,3 +185,13 @@ Ans:
     - Method 1: **Object literal** syntax: common way
     - Method 2: **new keyword and object constructor**
     - Method 3: **constructor fn** - much complex way - But benefit: very **easy to make new instances** of object with new keyword
+        - If we intend to make many objects in future: better to go for constructor fn. If only one object is reqd, go for object literal.
+
+## 03_20 Types of Data Types - typeof, isArray, instanceOf
+1. data types
+    - null, {}, []: obj
+    - undefined: obj
+2. In JS: arrays are objects. null is also designed as obj
+3. How to detect if a data is an array and not an object?
+    - use **isArray** method: `Array.isArray(myArr)`
+    - use **instanceOf** keyword: `myArr instanceof Array`
