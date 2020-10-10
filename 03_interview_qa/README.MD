@@ -43,9 +43,20 @@
 ## 03_06 Hoisting - var, fn expression, fn declaration, in - global and fn scope
 1. What variable and fn hoisting is and how it works?
 2. Ans: 
-    * In JS variables and fns are hoisted to the top of the scope where they are declared.
+    * **Definition**: In JS variables and fns are hoisted to the top of the scope that they are declared in.
         - scopes are either global scope of function scope
         - Variable and fn hoisting is basically a process in which JS interpreter looks through the code to find out all the var and fn declarations and it hoists those declarations to the top of the file. but not the assignments. Just the declarations.
     * For variables, fn expressions: declarations are hoisted to the top
     * For fn declarations: hoisting is different.: the whole fn with it's definition or assignment is moved to the top of the file.
     * Also if we are declaring var and fn inside a parent fn, the hoisting of those only happens in the parent fn.
+
+## 03_07 Hoisting - var vs let and const
+1. The var and fn hoisting to top of the global or fn scope is true only when we use the var keyword which is fn scoped.
+    - global scope
+    - function scope
+2. But if we use the let or const kekywords (block scoped), we have one more scope to think of
+    - global scope
+    - function scope
+    - block scope (for loop, if else, while etc.) For let and const: the variables will be hoisted to top of block scope.
+3. **Important**: 
+    - Although var is initialized with undefined on hoisting, let and const can not be accessed before it is defined or assigned any value.

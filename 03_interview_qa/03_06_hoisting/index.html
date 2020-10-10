@@ -68,6 +68,24 @@
         console.log(getState());
     })();
 
+    // 03_07 Hoisting - var vs let and const
+    function getTotal(){
+        // let total
+        // total = 0;
+        let total = 0;
+        // var multiplier
+        for(var i = 0; i < 10; i++) {
+            // let valueToAdd
+            // valueToAdd = i
+            // console.log(valueToAdd) - can not access let keyword before it is assigned
+            let valueToAdd = i;
+            var multiplier = 2;
+            // multiplier = 2
+            total += valueToAdd * multiplier;
+        }
+        return total;
+    }
+    console.log(getTotal());
 </script>
 
 </html>
