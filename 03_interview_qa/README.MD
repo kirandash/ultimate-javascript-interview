@@ -13,3 +13,12 @@
     Ans: To preserve a private scope within your function and not spoil/overwrite the global scope viz 3rd party libraries in global scope.
     - Ex: while using jQuery we might accidentally use the $ sign then we won't be able to access jQuery anymore
     - To fix this: It is always a good practice to wrap all our code in IIFE so that we don't overwrite the global variables accidentally.
+
+## 03_03 Button - onClick in for loop - sol: iife, fn, let
+1. Online code editor for HTML, CSS, JS: jsbin.com
+2. What will be alerted on clicking each button
+3. Ans: 6 for all buttons
+4. **Fix**: 
+    * **Using IIFE** to preserve value of i in it's own scope for onClick events
+    * Using separate fn scope and passing button, i
+    * Using **let** keyword for i variable (ES6 solution) - let has a block scope compared to var scope which has a global scope

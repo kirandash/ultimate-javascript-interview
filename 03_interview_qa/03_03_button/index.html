@@ -1,0 +1,79 @@
+<html>
+
+<head>
+    <title>Button</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // Problem: alerts 6 for all buttons
+    function createButtons() {
+        for (var i = 1; i <= 5; i++) {
+            var body = document.getElementsByTagName("BODY")[0];
+            var button = document.createElement("BUTTON");
+            button.innerHTML = 'Button ' + i;
+            button.onclick = function () {
+                alert('This is button ' + i);
+            }
+            body.appendChild(button);
+        }
+    }
+
+    // Solution 1: correct number for all buttons
+    // Using an IIFE to preserve scope of i for onClick event
+    function createButtonsSol1() {
+        for (var i = 1; i <= 5; i++) {
+            var body = document.getElementsByTagName("BODY")[0];
+            var button = document.createElement("BUTTON");
+            button.innerHTML = 'Button ' + i;
+            // Using an IIFE to preserve scope of i for onClick event
+            (function (num) {
+                button.onclick = function () {
+                    alert('This is button ' + num);
+                }
+            })(i);
+            body.appendChild(button);
+        }
+    }
+
+    // Solution 2: correct number for all buttons
+    // Using separate fn scope with button and i value passed
+    function createButtonsSol2() {
+        for (var i = 1; i <= 5; i++) {
+            var body = document.getElementsByTagName("BODY")[0];
+            var button = document.createElement("BUTTON");
+            button.innerHTML = 'Button ' + i;
+            addClickFunctionality(button, i)
+            body.appendChild(button);
+        }
+    }
+
+    function addClickFunctionality(button, num) {
+        button.onclick = function () {
+            alert('This is button ' + num);
+        }
+    }
+
+    // Solution 3: Using ES6 let keyword
+    function createButtonsSol3() {
+        for (let i = 1; i <= 5; i++) {
+            var body = document.getElementsByTagName("BODY")[0];
+            var button = document.createElement("BUTTON");
+            button.innerHTML = 'Button ' + i;
+            button.onclick = function () {
+                alert('This is button ' + i);
+            }
+            body.appendChild(button);
+        }
+    }
+
+
+    createButtons();
+    createButtonsSol1();
+    createButtonsSol2();
+    createButtonsSol3();
+</script>
+
+</html>
