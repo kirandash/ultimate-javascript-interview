@@ -155,3 +155,23 @@ Ans:
 1. sol 1: using curried fn
 2. sol 2: using `Array.prototype.slice.call(arguments)`
     - to create copy of array using .slice and call method to convert array like obj into array
+
+## 03_17 JSON Data
+1. Describe JSON format
+2. Delete the data types not permitted in JSON
+3. Replace placeholder text with the corresponding data type, properly formatted as JSON
+* Ans
+1. JSON: JavaScript Object Notation
+2. Light weight format for transferring data
+3. JSON is used bcoz:
+    - It is easy for humands to understand
+    - It is easy for computers to parse and generate
+4. Allowed data types:
+    - string, number, null, false, array, object
+5. Restricted data types:
+    - undefined, fns
+6. Note: no need to set a property undefined, bcoz in JSON: by default property is undefined
+7. fn is not allowed bcoz JSON is only used for data and not for computation.
+8. string - JSON must have double quotes, single quotes not allowed
+9. Data in array and obj must be in proper JSON format
+10. In JSON, every property is a string. So must wrap all property names in double quotes.
