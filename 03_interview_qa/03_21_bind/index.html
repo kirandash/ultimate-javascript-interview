@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <title>bind</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    this.distance = 10000;
+
+    const roadTrip1 = {
+        distance: 3000,
+        getDistance: function () {
+            return this.distance
+        }
+    };
+
+    const roadTrip2 = {
+        distance: 5000,
+        getDistance: function () {
+            return this.distance
+        }
+    };
+
+    const getTripDistance = roadTrip1.getDistance;
+    console.log(getTripDistance()); // here context of this is changed to global scope
+    console.log(roadTrip1.getDistance()) // here context of this is roadTrip1
+    const getTripDistance2 = roadTrip1.getDistance.bind(roadTrip1);
+    console.log(getTripDistance2());
+    const getTripDistance3 = roadTrip1.getDistance.bind(roadTrip2);
+    console.log(getTripDistance3());
+
+    // bind with params
+    const roadTrip3 = {
+        distance: 5000,
+        getDistance: function (unit, caption) {
+            return this.distance + unit + caption
+        }
+    };
+
+    // bind method will take this context, constant args such as unit
+    const getTripDistance4 = roadTrip3.getDistance.bind(roadTrip3, 'km'); 
+    console.log(getTripDistance4(' left to go')); // variable args can be passed in fn
+    console.log(getTripDistance4(' in total'));
+</script>
+
+</html>

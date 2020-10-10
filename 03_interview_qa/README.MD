@@ -195,3 +195,12 @@ Ans:
 3. How to detect if a data is an array and not an object?
     - use **isArray** method: `Array.isArray(myArr)`
     - use **instanceOf** keyword: `myArr instanceof Array`
+
+## 03_21 bind method
+1. Describe the bind method
+2. Explain the params it takes
+3. Code an example
+* Ans
+1. bind method: allows us to **bind the this context of a fn to a particular object**. similar to call and apply with a few differences.
+2. can pass params to bind method - which are always same
+    - if params will change - better pass it with main fn
