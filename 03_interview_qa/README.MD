@@ -115,3 +115,7 @@ Ans:
 1. Write a fn that keeps track of how many times it was called and return that number
 2. all functionalities should be inside the fn. non outside
 3. The best way for a fn to keep track of itself is using a **closure**
+
+## 03_13 Logging X and Y
+1. var x = y = 200; ---> translates to var x; y; y = 200; x = y; y will be created as global var since no let, var, const is supplied.
+2. To avoid such issues: better to use 'use strict'

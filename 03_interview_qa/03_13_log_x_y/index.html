@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <title>log x and y</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    (function () {
+        // 'use strict';
+        // var x // IIFE scope
+        // y // y is declared globally since no var, let, const
+        // x = y = 200
+        var x = y = 200;
+    })();
+
+    console.log('y: ', y); // 200 // with us: undefined since us doesn't allow you to declare without var, let, const
+    console.log('x: ', x); // undefined
+</script>
+
+</html>
