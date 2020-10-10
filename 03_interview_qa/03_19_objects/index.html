@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <title>Objects creation</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // Method 1: Object literal syntax
+    const myBoat = {
+        length: 24,
+        maxSpeed: 45,
+        passengers: 14,
+        getLength: function() {
+            return this.length
+        }
+    }; // myBoat object with 3 properties and a method
+
+    // Method 2: new keyword and object constructor
+    const student = new Object();
+
+    student.grade = 12;
+    student.gradePointAverage = 3.7;
+    student.classes = ["English", "Algebra", "Chemistry"];
+
+    student.getClasses = function(){
+        return this.classes
+    } // student object 3 propserties and a method
+
+    // Method 3: Constructor Fn
+    function Car(color, brand, year) {
+        this.color = color;
+        this.brand = brand;
+        this.year = year;
+    }
+
+    Car.prototype.getColor = function(){
+        return this.color;
+    } // Car object with 3 props and a method
+
+    const myCar = new Car('blue', 'ferrari', 2019)
+    const yourCar = new Car('red', 'Lamborghini', 2020)
+    console.log(myCar)
+    console.log(yourCar)
+    console.log(myCar.getColor())
+    console.log(yourCar.getColor())
+</script>
+
+</html>

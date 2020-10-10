@@ -179,3 +179,9 @@ Ans:
 ## 03_18 Order Logged Out - setTimeout - async
 1. setTimeouts are async calls(since it has callback fns) and will be queued for execution after the current queue is finished.
 2. **event loops** work in this way: first finish up all the direct code execution and then process async calls
+
+## 03_19 Different ways to create an Object
+1. List and describe 3 different ways to create an object in JS
+    - Method 1: **Object literal** syntax: common way
+    - Method 2: **new keyword and object constructor**
+    - Method 3: **constructor fn** - much complex way - But benefit: very **easy to make new instances** of object with new keyword
