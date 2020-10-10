@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <title>scope and self</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // this.color = 'red'; to fix this.color issue in IIFE - use self or declare variable globally
+
+    var myCar = {
+        color: "Blue",
+        logColor: function () {
+            var self = this; // this and self points to myCar object - since a method on myCar object
+            console.log("In logColor - this.color: " + this.color);
+            console.log("In logColor - self.color: " + self.color);
+            (function () {
+                // this here has lost reference to myCar object bcoz of the IIFE and only has reference to the global obj
+                console.log("In IIFE - this.color: " + this.color); // no color on global scope
+                console.log("In IIFE - self.color: " + self.color);
+            })();
+        }
+    };
+
+    myCar.logColor();
+</script>
+
+</html>

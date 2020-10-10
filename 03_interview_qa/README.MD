@@ -50,7 +50,7 @@
     * For fn declarations: hoisting is different.: the whole fn with it's definition or assignment is moved to the top of the file.
     * Also if we are declaring var and fn inside a parent fn, the hoisting of those only happens in the parent fn.
 
-## 03_07 Hoisting - var vs let and const
+## 03_06 Hoisting - var vs let and const
 1. The var and fn hoisting to top of the global or fn scope is true only when we use the var keyword which is fn scoped.
     - global scope
     - function scope
@@ -60,3 +60,8 @@
     - block scope (for loop, if else, while etc.) For let and const: the variables will be hoisted to top of block scope.
 3. **Important**: 
     - Although var is initialized with undefined on hoisting, let and const can not be accessed before it is defined or assigned any value.
+
+## 03_07 scope and self
+1. method on an obj will have this pointing to the obj
+2. method inside method will loose it's scope from obj and point to the global scope.
+    - To fix: use **self or declare this in global scope**
