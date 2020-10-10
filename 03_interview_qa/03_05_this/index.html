@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <title>this</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var house = {
+        price: 100000,
+        squareFeet: 2000,
+        owner: 'Taylor',
+        getPricePerSquareFoot: function() {
+            return house.price / house.squareFeet;
+        }
+    };
+
+    console.log(house.price)
+    console.log(house.getPricePerSquareFoot())
+
+    // using this
+    var house1 = {
+        price: 100000,
+        squareFeet: 2000,
+        owner: 'Taylor',
+        getPricePerSquareFoot: function() {
+            return this.price / this.squareFeet; // this refers to the object that is in context of
+        }
+    };
+
+    console.log(house1.price)
+    console.log(house1.getPricePerSquareFoot())
+
+    // using this
+    // var house2 = {
+    //     price: 100000,
+    //     squareFeet: 2000,
+    //     owner: 'Taylor',
+    //     getPricePerSquareFoot: () =>  {
+    //         return this.price / this.squareFeet; // this refers to the object that is in context of
+    //     }
+    // };
+
+    // console.log(house2.price)
+    // console.log(house2.getPricePerSquareFoot())
+</script>
+
+</html>

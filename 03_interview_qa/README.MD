@@ -34,3 +34,8 @@
     * The closure also has access to
         - it's own parameters
         - parameters of outer fn
+
+## 03_05 this keyword
+1. What is the this keyword and how is it used?
+2. Ans:
+    * this refers to whatever object it is directly inside of. Ex: in global env: this referes to global window object
