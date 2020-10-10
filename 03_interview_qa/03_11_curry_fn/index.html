@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <title>curry fn</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    'use strict';
+
+    function getProduct(num1, num2) {
+        return num1 * num2;
+    }
+
+    console.log(getProduct(3, 4))
+
+    // Currying fn: single fn with multiple args ---> multiple sequence of fn with each fn limited to one or part of arg
+    function getProduct2(num1) {
+        return function(num2) {
+            return num1 * num2
+        }
+    }
+
+    console.log(getProduct2(3)(4))
+
+    // Currying - Real time application
+    function getTravelTime(distance, speed) {
+        return distance / speed;
+    }
+
+    console.log(getTravelTime(400, 50))
+    console.log(getTravelTime(400, 60))
+    console.log(getTravelTime(400, 70))
+
+    // Here distance is always constant while the other parameter changes
+    // in such situation we can use currying to set distance as 400km always
+    // curried fn
+    function getTravelTimeNew(distance) {
+        return function (speed) {
+            return distance / speed;
+        }
+    }
+
+    const travelTime = getTravelTimeNew(400); // fn with distance set to 400 - returns next fn
+
+    console.log(travelTime)
+    // different speeds
+    console.log(travelTime(50))
+    console.log(travelTime(60))
+    console.log(travelTime(70))
+    console.log(travelTime(80))
+</script>
+
+</html>

@@ -104,3 +104,9 @@ Ans:
     - helps during the development process for easy error detection
     - helps fail fast and fail loudly
     - so we can detect error sooner
+
+## 03_11 Curry Function
+1. Curry given fn
+2. single fn with multiple args ---> multiple sequence of fn with each fn limited to one or part of arg
+3. Add a real time application example
+    - when one of the arg is of fixed value viz: calculating time taken to cover a fixed distance for different speeds
