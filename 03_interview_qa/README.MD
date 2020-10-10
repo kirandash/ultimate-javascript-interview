@@ -135,3 +135,17 @@ Ans:
 
 ## 03_14 apply method
 1. apply method is similar to call method but the difference is how the arguments are sent. **AS AN ARRAY**
+
+## 03_15 Determine list2
+1. **passing data by reference vs passing data by value**
+    - primitive data types are always passed by value viz: string or number
+    - non-primitive data types are passed by reference viz: arrays objects
+2. Once array is reassigned, new array will still point to the old array
+    - changing the individual value of list1 won't affect list2 bcoz underlying object or reference is still the same
+
+## 03_15 Copying Array data - without reference - slice, concat, spread operator
+* Using array Methods:
+1. list2 = list1.slice()
+2. list2 = list1.concat([])
+* use spread operator
+* use empty array and loop in through for loop

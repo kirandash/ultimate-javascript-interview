@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <title>list</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var list1 = [1, 2, 3, 4, 5]; // passing data by reference - non-primitive data types viz objects and arrays
+    var list2 = list1; // list 2 mirrors list1
+
+    list1.push(6, 7, 8);
+
+    console.log(list2); // [1,2,3,4,5,6,7,8]
+
+    list1 = [10, 20, 30]
+    console.log(list1) // [1,2,3,4,5,6,7,8]
+    console.log(list2) // [10, 20, 30]
+    list1.push(3)
+    console.log(list1)
+    console.log(list2)
+
+    // passing data by value - primitive data type
+    const myNum = 12;
+    const myString = 'hello world!';
+    const myString2 = myString;
+
+    // Copying Array data - without reference
+    var list3 = [1, 2, 3, 4, 5];
+    var list4 = [...list3]; // copying an array with spread operator
+    list3.push(4, 7, 8)
+    console.log(list3)
+    console.log(list4)
+
+    // copying array - using slice()
+    var list5 = [1, 2, 3, 4, 5];
+    var list6 = list5.slice();
+    list5.push(4, 7, 8)
+    console.log(list5)
+    console.log(list6)
+
+    // copying array - using concat([])
+    var list7 = [1, 2, 3, 4, 5];
+    var list8 = list7.concat([]);
+    list7.push(4, 7, 8)
+    console.log(list7)
+    console.log(list8)
+
+    // for loop and push into an empty array
+</script>
+
+</html>
