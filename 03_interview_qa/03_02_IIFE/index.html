@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>IIFE</title>
+    </head>
+    <body>
+
+    </body>
+    <script>
+        // IIFE with traditional fn
+        // var a = 10;
+        // (function(x){
+        //     console.log(a)
+        //     var b = 10;
+        //     console.log(x)
+        // })(5)
+        // console.log(b)
+        // console.log(x)
+
+        // Note: Can only execute one IIFE in a queue. Thus commented above code
+        // IIFE with arrow fn
+        // ((num) => console.log(num * 2))(10)
+
+        // IIFE
+        (function(){
+            function getTotal(a, b) {
+                return a + b;
+            }
+
+            // will overwrite the $ variable only in this IIFE block. We will still be ok to use $ sign in other blocks for jQuery. So we are not overwriting global scope but overwriting variable in local scope only
+            var $ = 'currency';
+
+            if(true) console.log('hello world')
+        })()
+    </script>
+</html>
