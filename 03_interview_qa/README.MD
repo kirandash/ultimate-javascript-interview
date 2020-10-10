@@ -110,3 +110,8 @@ Ans:
 2. single fn with multiple args ---> multiple sequence of fn with each fn limited to one or part of arg
 3. Add a real time application example
     - when one of the arg is of fixed value viz: calculating time taken to cover a fixed distance for different speeds
+
+## 03_12 Counter Function - fn to keep track of itself with closure
+1. Write a fn that keeps track of how many times it was called and return that number
+2. all functionalities should be inside the fn. non outside
+3. The best way for a fn to keep track of itself is using a **closure**
