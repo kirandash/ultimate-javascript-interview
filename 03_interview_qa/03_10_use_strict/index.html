@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>use strict</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    'use strict';
+    
+    // 1. prevents the use of global variable ex: variable declaration without var, let, const
+    city = 'London' // variable declared without var, let, const is declared on global or window level
+    console.log(city)
+
+    // 2. revents Duplicate parameter name
+    function myFunc(a, a, b) {
+        console.log(a, a, b) // without use strict ---> 2,2,3
+    }
+
+    myFunc(1, 2, 3)
+
+    // prevents deletion of non deletable items
+    delete Object.prototype;
+</script>
+
+</html>

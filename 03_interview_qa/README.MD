@@ -89,3 +89,18 @@ Ans:
 1. Redeclaring variable will re hoist it
 2. JS first checks in immediate scope and then the outer scope
 3. var is an ES5 JS feature - old code
+
+## 03_10 use strict
+1. What does strict mode do to your code?
+2. What are the benefits of using strict mode?
+3. Ans:
+    * 'use strict'
+        - main purpose: Enforce **stricter parsing and error handling** in your code
+4. Features
+    - prevents the use of global variable ex: variable declaration without var, let, const
+        - prevents Duplicate parameter name
+        - prevents deletion of non deletable items
+5. Benefits:
+    - helps during the development process for easy error detection
+    - helps fail fast and fail loudly
+    - so we can detect error sooner
