@@ -175,3 +175,7 @@ Ans:
 8. string - JSON must have double quotes, single quotes not allowed
 9. Data in array and obj must be in proper JSON format
 10. In JSON, every property is a string. So must wrap all property names in double quotes.
+
+## 03_18 Order Logged Out - setTimeout - async
+1. setTimeouts are async calls(since it has callback fns) and will be queued for execution after the current queue is finished.
+2. **event loops** work in this way: first finish up all the direct code execution and then process async calls
