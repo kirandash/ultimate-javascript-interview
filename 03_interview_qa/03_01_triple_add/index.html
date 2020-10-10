@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Triple Add</title>
+    </head>
+    <body>
+
+    </body>
+    <script>
+        // Currying version of tripleAdd1 fn
+        const tripleAdd = (a) => (b) => (c) => a + b + c;
+
+        const tripleAdd1 = (a,b,c) => a + b + c;
+
+        const quadrupleAdd = (a) => (b) => (c, d) => a + b + c + d;
+
+        console.log(tripleAdd(10)(20)(30)) // returns total of all 3 numbers
+        console.log(tripleAdd(10)(20))
+        console.log(tripleAdd(10))
+
+        console.log(tripleAdd1(10, 20, 30))
+
+        console.log(quadrupleAdd(10)(20)(30, 40))
+    </script>
+</html>
