@@ -220,3 +220,9 @@ Ans:
     - single argument(number) ---> return an empty array of that length
     - single argument(non nuimber) ---> returns array with just that argument passed as an element
     - multiple arguments ---> returns new array with all arguments passed in as elements in it
+
+## 03_24 Array indexOf
+1. Two objects are never the same in JS. Since objects are passed by reference. Thus, can not find a specific object in an array using indexOf.
+    - same concept for arrays.
+    - can be used only if the array is searched with same reference.
+2. indexOf method can also be applied for string.
