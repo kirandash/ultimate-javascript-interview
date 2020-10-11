@@ -210,3 +210,13 @@ Ans:
 2. To compare two different objects with different reference:
     - convert obj to string using `JSON.stringify`
 3. Same concept for array as well
+
+## 03_23 Array constructor - new Array()
+1. var myArr = [];
+2. var myarr = new Array(50)
+3. When you pass a single element of positive number in `new Array()` it is considered as the length.
+    - only way to create an empty array with certain length
+4. Summary:
+    - single argument(number) ---> return an empty array of that length
+    - single argument(non nuimber) ---> returns array with just that argument passed as an element
+    - multiple arguments ---> returns new array with all arguments passed in as elements in it
