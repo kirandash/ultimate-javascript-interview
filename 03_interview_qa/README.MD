@@ -239,3 +239,7 @@ Ans:
     - also output is a string. So convert to number using `Number()`
 4. Fix: 3. not use decimal at all
     - perform math operations like multiplication in integer format and then convert it back to decimal
+
+## 03_26 Objects and Strings - pass by reference and pass by value
+1. Strings are passed by value.
+2. Objects are passed by reference.
