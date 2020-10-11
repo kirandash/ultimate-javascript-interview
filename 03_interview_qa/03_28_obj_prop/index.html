@@ -1,0 +1,22 @@
+<html>
+
+<head>
+    <title>Object Properties</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const a = {};
+    const b = { name: 'b' };
+    const c = { name: 'c' };
+
+    a[b] = 200; // a[{name : 'b'}] --> a['[object Object]'] = 200: JS will convert object into string if assigned to key
+    a[c] = 400; // a['[object Object]'] = 400 ---> JS will convert object into string if assigned to key
+
+    console.log(a[b]); // a['[object object]'] = 400
+    console.log(a)
+</script>
+
+</html>

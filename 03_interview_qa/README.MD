@@ -247,3 +247,9 @@ Ans:
 ## 03_27 Strings and Arrays - using array methods for strings
 1. Array.prototype.filter ---> [].filter (shortcut)
 2. to use array method on string - use call method with this context and args for filter
+3. can only use read-only methods viz: filter, forEach, map, some, every etc. 
+4. But can't use methods to manipulate viz: push, pop, splice, shift, reverse
+
+## 03_28 Object properties on Object
+1. **only strings are allowed as properties** on objects
+2. assigning objects as keys will be **converted as string by JS**.
