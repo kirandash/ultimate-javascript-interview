@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <title>X and Y</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var x = 10;
+
+    function y() {
+        x = 100; // when no let, const, var - variable is declared as global variable
+        // but since x() will be hoisted as well
+        // the above code will reassign local x fn name to 100 - thus won't be a global variable
+        return;
+        function x() { } // won't execute but x() will be hoisted
+    }
+
+    y();
+
+    console.log(x); // 10
+</script>
+
+</html>

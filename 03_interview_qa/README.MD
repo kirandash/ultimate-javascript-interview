@@ -253,3 +253,6 @@ Ans:
 ## 03_28 Object properties on Object
 1. **only strings are allowed as properties** on objects
 2. assigning objects as keys will be **converted as string by JS**.
+
+## 03_29 x and y - hoisting with same variable and fn name
+1. variable name can reassign fn name
