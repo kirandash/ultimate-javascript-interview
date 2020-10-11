@@ -256,3 +256,5 @@ Ans:
 
 ## 03_29 x and y - hoisting with same variable and fn name
 1. variable name can reassign fn name
+
+## 03_30 withdraw from account - bind and this context
