@@ -243,3 +243,7 @@ Ans:
 ## 03_26 Objects and Strings - pass by reference and pass by value
 1. Strings are passed by value.
 2. Objects are passed by reference.
+
+## 03_27 Strings and Arrays - using array methods for strings
+1. Array.prototype.filter ---> [].filter (shortcut)
+2. to use array method on string - use call method with this context and args for filter

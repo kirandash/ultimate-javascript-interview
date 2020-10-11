@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <title>Strings and Arrays</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const data1 = 'Jordan Smith';
+
+    // Using array method on strings
+    // Array.prototype.filter ---> [].filter (shortcut)
+    // to use array method on string - use call method with this context and args for filter
+    const data2 = [].filter.call(data1, function (elem, index) {
+        return index > 6;
+    });
+    // can only use read-only methods viz: filter, forEach, map, some, every etc. 
+    // But can't use methods to manipulate viz: push, pop, splice, shift, reverse
+
+    console.log(data2); // ['S','m','i','t','h']
+</script>
+
+</html>
