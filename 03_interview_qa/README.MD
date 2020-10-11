@@ -226,3 +226,16 @@ Ans:
     - same concept for arrays.
     - can be used only if the array is searched with same reference.
 2. indexOf method can also be applied for string.
+
+## 03_25 Equivalent Numbers - JS issue with decimals
+1. In JS all numbers are **IEEE 754 floating point numbers**. That's why decimal numbers can not be represented perfectly in JS.
+    - Ex: 2/3 ---> 0.66666667
+    - No way for mapping decimal to 1/10th of a binary floating point number
+    - **Caution**: Be ware when working with decimals
+2. Fix: 1. use `toFixed(2)`
+    - returns o/p as string. So convert to number using `Number()`
+3. Fix: 2. use `toPrecision(12)`
+    - returns precised number without rounding up, upto 12 digits before and after decimal
+    - also output is a string. So convert to number using `Number()`
+4. Fix: 3. not use decimal at all
+    - perform math operations like multiplication in integer format and then convert it back to decimal
