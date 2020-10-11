@@ -204,3 +204,9 @@ Ans:
 1. bind method: allows us to **bind the this context of a fn to a particular object**. similar to call and apply with a few differences.
 2. can pass params to bind method - which are always same
     - if params will change - better pass it with main fn
+
+## 03_22 Two Objects - Comparison
+1. Two different objects are never equal to each other. Bcoz in JS: for objects data is passed by reference and not by value.
+2. To compare two different objects with different reference:
+    - convert obj to string using `JSON.stringify`
+3. Same concept for array as well

@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <title>Two objects</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const user1 = {
+        name: 'Jordan',
+        age: 28
+    };
+
+    const user2 = {
+        name: 'Jordan',
+        age: 28
+    };
+
+    const user3 = user1;
+
+    console.log(user1 == user2); // false - two separate objs with different reference
+    console.log(user1 === user2); // false - two separate objs with different reference
+
+    console.log(user1 == user3); // true - both objs with same reference
+    console.log(user1 === user3); // true - both objs with same reference
+
+    // Comparing two different objects - by convertng them to string
+    console.log(JSON.stringify(user1) === JSON.stringify(user2))
+</script>
+
+</html>
