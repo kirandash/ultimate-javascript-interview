@@ -1,0 +1,113 @@
+<html>
+    <head>
+        <title>Hash Tables</title>
+    </head>
+    <body>
+
+    </body>
+    <script>
+        // Example - Hash Table
+
+        // HashTable constructor fn
+        function HashTable(size) {
+            this.buckets = Array(size); // buckets where data will be stored
+            this.numBuckets = this.buckets.length;
+        }
+
+        // HashNode fn
+        function HashNode(key, value, next){
+            this.key = key;
+            this.value = value;
+            this.next = next || null;
+        }
+
+        // Fn to hash our keys into an appropriate number
+        HashTable.prototype.hash = function(key) {
+            var total = 0;
+            for (var i = 0; i < key.length; i++) {
+                total += key.charCodeAt(i); // charCodeAt converts character position to unicode
+            }
+            var bucket = total % this.numBuckets; // the total should be in range from 0 - buckets length
+            return bucket;
+        }
+
+        // Insert method - takes key value pair, turn that into hashnode and place that node into correct bucket in hash table
+        HashTable.prototype.insert = function(key, value) {
+            // index where to put our key value pair
+            var index = this.hash(key);
+            // If target node doesn't have any data
+            if(!this.buckets[index]) this.buckets[index] = new HashNode(key, value);
+            else if (this.buckets[index].key === key) {
+                // edit data in first node
+                this.buckets[index].value = value;
+            }
+            // If target node already has some data, chain your data to the end of the list
+            else {
+                var currentNode = this.buckets[index];
+                // travel the chain till the last node
+                while(currentNode.next) {
+                    if(currentNode.next.key === key) {
+                        // edit data in next node if present
+                        currentNode.next.value = value;
+                        return;
+                    }
+                    currentNode = currentNode.next;
+                }
+                // insert key value pair to end of chain
+                currentNode.next = new HashNode(key, value);
+            }
+        }
+
+        // Get Method
+        HashTable.prototype.get = function(key) {
+            // get bucket address to look at
+            var index = this.hash(key);
+            if(!this.buckets[index]) return null;
+            else {
+                var currentNode = this.buckets[index];
+                while(currentNode) {
+                    if(currentNode.key === key) return currentNode.value;
+                    currentNode = currentNode.next; // to allow us to travel through the list
+                }
+                return null;
+            }
+        }
+
+        // Retrieve all nodes in hashtable method
+        HashTable.prototype.retrieveAll = function() {
+            var allNodes = [];
+            for(var i = 0; i < this.numBuckets; i++) {
+                var currentNode = this.buckets[i];
+                while(currentNode) {
+                    allNodes.push(currentNode);
+                    currentNode = currentNode.next;
+                }
+            }
+            return allNodes;
+        };
+        
+        var myHT = new HashTable(30); // returns 
+        console.log(myHT.hash('Becca')); // returns 12
+
+        // testing insertion
+        myHT.insert('Dean', 'dean@gmail.com');
+        myHT.insert('Megan', 'megan@gmail.com');
+        // testing collision insertion
+        myHT.insert('Dane', 'dane@yahoo.com');
+
+        // updating Dean's email
+        myHT.insert('Dean', 'deanmachine@gmail.com');
+        myHT.insert('Megan', 'megansmith@gmail.com');
+        myHT.insert('Dane', 'dane@outlook.com');
+
+        console.log(myHT.buckets); 
+
+        // testing get method
+        console.log(myHT.get('Dean'));
+
+        // testing retrieve all method
+        console.log(myHT.retrieveAll());
+
+        console.log(myHT);
+    </script>
+</html>
